@@ -14,7 +14,8 @@ function App() {
   return (
     <>
       <AppWrapper style={{ width: size.width, height: size.height }} >
-        <Registration />
+        {/* <Registration /> */}
+        <KeyboardHero />
       </AppWrapper>
     </>
   )
