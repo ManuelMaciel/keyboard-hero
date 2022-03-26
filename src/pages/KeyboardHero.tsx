@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { getRandomNumber } from '../utils';
 
-const KeyboardHero = () => {
+interface KeyboardHeroProps {
+  addPoints: (point: number) => void;
+  decreasePoints: (point: number) => void;
+}
+
+const KeyboardHero = ({ addPoints, decreasePoints }: KeyboardHeroProps) => {
   const [keys] = useState([
     ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   ])
@@ -39,6 +44,7 @@ const KeyboardHero = () => {
 
     if (keyPressed === highlightedKey?.innerHTML) {
       timestamps.unshift(getTimestamp());
+      console.log('is equal', keyPressed === highlightedKey?.innerHTML);
       const elapsedTime = timestamps[0] - timestamps[1];
       console.log(`Character per minute ${60/elapsedTime}`)
       highlightedKey.classList.remove("selected");
