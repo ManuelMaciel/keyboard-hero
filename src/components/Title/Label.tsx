@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Label = ({ title }: string) => {
+const Label = ({ title }: any) => {
   return (
     <LabelWrapper>
       {title}
