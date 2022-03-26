@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { getRandomNumber } from '../utils';
 
 const KeyboardHero = () => {
@@ -45,6 +45,8 @@ const KeyboardHero = () => {
       targetRandomKey();
     }
   })
+
+
   useEffect(() => {
     targetRandomKey();
   }, [])
@@ -143,36 +145,41 @@ const Row = styled.ul`
 const Pinky = styled(LiStyled)`
   background-color: crimson;
   border: 2px solid crimson;
-  ::selection {
+  &.selected {
     color: crimson;
+    background-color: transparent;
   }
 `
 const Ring = styled(LiStyled)`
   background-color: coral;
   border: 2px solid coral;
-  ::selection {
+  &.selected {
     color: coral;
+    background-color: transparent;
   }
 `
 const Middle = styled(LiStyled)`
   background-color: darkorange;
   border: 2px solid darkorange;
-  ::selection {
+  &.selected {
     color: darkorange;
+    background-color: transparent;
   }
 `
 const Pointer1 = styled(LiStyled)`
   background-color: gold;
   border: 2px solid gold;
-  ::selection {
+  &.selected {
     color: gold;
+    background-color: transparent;
   }
 `
 const Pointer2 = styled(LiStyled)`
   background-color: khaki;
   border: 2px solid khaki;
-  ::selection {
+  &.selected {
     color: khaki;
+    background-color: transparent;
   }
 `
 
