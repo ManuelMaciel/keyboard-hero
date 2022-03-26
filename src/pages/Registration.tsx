@@ -1,8 +1,14 @@
+import Card from "../components/Card/Card";
+import Input from "../components/Input/Input";
+import Title from "../components/Title/Title";
+
 const Registration = () => {
   return (
-    <div>
-      <p>Hola Mundo</p>
-    </div>
+    <Card>
+      <Title title="¿Cuál es tu nombre?" />
+      <div style={{ margin: "10px" }} />
+      <Input />
+    </Card>
   )
 }
 

@@ -5,10 +5,15 @@ import Registration from './pages/Registration';
 
 function App() {
   const screenSize = useScreenSize();
-  console.log('screenSize', screenSize);
+
+  const size = {
+    height: screenSize.innerHeight,
+    width: screenSize.innerWidth,
+  }
+
   return (
     <>
-      <AppWrapper>
+      <AppWrapper style={{ width: size.width, height: size.height }} >
         <Registration />
       </AppWrapper>
     </>
@@ -21,8 +26,8 @@ const AppWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #fafafa;
+  ${(props: any) => props.style}
+  background-color: black;
 `;
 
 export default App

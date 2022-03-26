@@ -2,15 +2,14 @@ import styled from "styled-components";
 
 const Input = () => {
   return (
-    <div>
-      <p>Hola Mundo</p>
-    </div>
+    <InputWrapper>
+      <input />
+    </InputWrapper>
   )
 }
 
 // Styled Components
-const Input = styled.input`
-
+const InputWrapper = styled.div`
+  background-color: green;
 `
-
 export default Input;
