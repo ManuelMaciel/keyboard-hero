@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useScreenSize } from './hooks/useScreenSize';
-import KeyboardHero from './pages/KeyboardHero';
+import KeyboardGame from './pages/KeyboardGame';
 import Registration from './pages/Registration';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <>
       <AppWrapper style={{ width: size.width, height: size.height }} >
         {/* <Registration /> */}
-        <KeyboardHero />
+        <KeyboardGame />
       </AppWrapper>
     </>
   )
