@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { useScreenSize } from './hooks/useScreenSize';
 import KeyboardGame from './pages/KeyboardGame';
-import Registration from './pages/Registration';
 
 function App() {
   const screenSize = useScreenSize();
